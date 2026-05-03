@@ -22,11 +22,5 @@ jobs:
           docker run -d -p 5000:5000 my-python-app
           sleep 5
           curl http://localhost:5000
-      - name: AI Review
-        uses: adshao/chatgpt-code-review-action@main
-        with:
-          OPENAI_TOKEN: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FULL_REVIEW_COMMENT: "true"
 
       
